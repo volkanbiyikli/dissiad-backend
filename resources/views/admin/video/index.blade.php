@@ -7,11 +7,6 @@
 
 @section('pagestyles')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <style>
-        .sortable {
-            cursor: grab;
-        }
-    </style>
 @endsection
 
 @section('pagevendors')
@@ -150,39 +145,6 @@
             }
           })
         });
-
-        $('#sortable').sortable({
-          revert: true,
-          handle: ".sortable",
-          stop  : function(event, ui) {
-            var data = $(this).sortable('serialize');
-            $.ajax({
-              type   : "POST",
-              data   : data,
-              url    : "{{route('video.sortable')}}",
-              success: function(msg) {
-                // console.log(msg);
-
-                if(msg) {
-                  toastr.success("Video sıralama işlemi başarılı olarak gerçekleştirildi.", "Başarılı");
-                } else {
-                  toastr.error("Video sıralama işlemi gerçekleştirilemedi.", "Başarısız");
-                }
-              }
-            });
-          }
-        });
-
-        $('table tbody').sortable({
-          helper: fixWidthHelper
-        }).disableSelection();
-
-        function fixWidthHelper(e, ui) {
-          ui.children().each(function() {
-            $(this).width($(this).width());
-          });
-          return ui;
-        }
 
       });
     </script>

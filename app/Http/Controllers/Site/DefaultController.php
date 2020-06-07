@@ -26,7 +26,7 @@ class DefaultController extends Controller
         $data['slider'] = Sliders::all()->sortBy('order')->take(10);
         $data['new'] = News::all()->sortByDesc('date')->take(8);
         $data['bulletin'] = Bulletin::all()->sortByDesc('date')->take(8);
-        $data['video'] = Videos::all()->sortByDesc('order')->take(24);
+        $data['video'] = Videos::all()->sortByDesc('date')->take(24);
         $data['roportage'] = Reportage::all()->sortByDesc('date')->take(8);
         return view('site.index',compact('data'));
     }

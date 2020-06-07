@@ -33,7 +33,7 @@
                                                         <a class="swiper-slide" href="/upload/reportages/{{ $page_detail->image }}" data-fancybox="gallery"
                                                            style="background-image:url(/upload/news/{{ $page_detail->image }})"><img src="/upload/reportages/{{ $page_detail->image }}"></a>
                                                     @else
-                                                        <img src="/upload/news/{{ $page_detail->image }}">
+                                                        <img src="/upload/reportages/{{ $page_detail->image }}">
                                                     @endif
                                                 </div>
                                             @endif

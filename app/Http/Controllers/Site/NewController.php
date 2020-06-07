@@ -19,7 +19,7 @@ class NewController extends Controller
         $data['socialmedia'] = SocialMedias::all()->sortBy('order');
         $data['new'] = DB::table('news')
             ->orderBy('date', 'desc')
-            ->paginate(2, ['*'], 'sayfa');
+            ->paginate(10, ['*'], 'sayfa');
         return view('site.new', compact('data'));
     }
 

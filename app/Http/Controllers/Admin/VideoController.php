@@ -21,7 +21,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $data['video'] = Videos::all()->sortBy('order');
+        $data['video'] = Videos::all()->sortByDesc('date');
 //        dd($data);
         return view('admin.video.index', ['data' => $data]);
     }

@@ -72,7 +72,7 @@
                                             <div class="form-group row">
                                                 <label class="col-3 col-form-label">İçerik *</label>
                                                 <div class="col-9">
-                                                    <textarea id="summernote" name="description" required>{{ ($new->description) }}</textarea>
+                                                    <textarea id="summernote" name="description" required>{!! $new->description !!}</textarea>
                                                     <span class="form-text text-muted"></span>
                                                 </div>
 

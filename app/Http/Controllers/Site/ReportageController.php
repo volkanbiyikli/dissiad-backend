@@ -21,7 +21,7 @@ class ReportageController extends Controller
         $data['socialmedia'] = SocialMedias::all()->sortBy('order');
         $data['new'] = DB::table('reportages')
             ->orderBy('date', 'desc')
-            ->paginate(2, ['*'], 'sayfa');
+            ->paginate(10, ['*'], 'sayfa');
         return view('site.reportage', compact('data'));
     }
 

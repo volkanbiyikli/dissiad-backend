@@ -20,7 +20,7 @@ class BulletinController extends Controller
         $data['socialmedia'] = SocialMedias::all()->sortBy('order');
         $data['new'] = DB::table('bulletins')
             ->orderBy('date', 'desc')
-            ->paginate(2, ['*'], 'sayfa');
+            ->paginate(10, ['*'], 'sayfa');
         return view('site.bulletin', compact('data'));
     }
 

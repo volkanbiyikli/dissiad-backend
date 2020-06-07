@@ -137,7 +137,7 @@
                                                 <a class="videos-item" href="http://www.youtube.com/embed/{{ $db->url }}">
                                                     <div class="row-md">
                                                         <div class="col-auto">
-                                                            <div class="videos-item__picture"><img src="http://i3.ytimg.com/vi/{{ $db->url }}/hqdefault.jpg"></div>
+                                                            <div class="videos-item__picture"><img src="http://i3.ytimg.com/vi/{{ $db->url }}/maxresdefault.jpg"></div>
                                                         </div>
                                                         <div class="col videos-item__content">
                                                             <div class="videos-item__title videos-item__title-sm">{{ $db->name }}</div>
